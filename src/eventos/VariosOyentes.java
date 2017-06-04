@@ -64,7 +64,6 @@ class MarcoEmergente extends JFrame{
 		setBounds(40*contador, 40*contador, 300, 150);
 		CierraTodos oyenteCerrar = new CierraTodos(); 
 		botonPrincipal.addActionListener(oyenteCerrar);//le paso a la fuente el oyente
-		
 	}
 	
 	//creo clase oyente interna
