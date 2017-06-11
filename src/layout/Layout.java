@@ -25,16 +25,15 @@ class MarcoLayout extends JFrame{
 		//Agregamos la lamina al marco
 		PanelLayout lamina = new PanelLayout(); 
 		
-		//antes de agregar la lámina indicamos su disposición
-		//utilizamos el método setLayout abreviado de JPanel
-		lamina.setLayout(new FlowLayout(FlowLayout.CENTER,75,100));
-		
 		add(lamina); //agregamos la lámina
 	}
 }
 
 class PanelLayout extends JPanel{
 	public PanelLayout() {
+		
+		//establecemos el posicionamiento de la lámina en el constructor
+		setLayout(new FlowLayout(FlowLayout.CENTER, 75, 100));
 		add(new JButton("Amarillo"));
 		add(new JButton("Azul"));
 		add(new JButton("Rojo"));
