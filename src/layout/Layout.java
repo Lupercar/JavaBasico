@@ -36,7 +36,7 @@ class PanelLayout extends JPanel{
 	public PanelLayout() {
 		
 		//establecemos el posicionamiento de la lámina en el constructor
-		setLayout(new BorderLayout());
+		setLayout(new BorderLayout(10,10));
 		
 		add(new JButton("Amarillo"), BorderLayout.NORTH);
 		add(new JButton("Azul"), BorderLayout.WEST);
