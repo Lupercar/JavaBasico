@@ -1,10 +1,13 @@
 package layout;
 
+import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
+import javafx.scene.layout.Border;
 
 public class Layout {
 
@@ -33,9 +36,12 @@ class PanelLayout extends JPanel{
 	public PanelLayout() {
 		
 		//establecemos el posicionamiento de la lámina en el constructor
-		setLayout(new FlowLayout(FlowLayout.CENTER, 75, 100));
-		add(new JButton("Amarillo"));
-		add(new JButton("Azul"));
-		add(new JButton("Rojo"));
+		setLayout(new BorderLayout());
+		
+		add(new JButton("Amarillo"), BorderLayout.NORTH);
+		add(new JButton("Azul"), BorderLayout.WEST);
+		add(new JButton("Rojo"), BorderLayout.SOUTH);
+		add(new JButton("Verde"), BorderLayout.EAST);
+		add(new JButton("Negro"), BorderLayout.CENTER); 
 	}
 }
