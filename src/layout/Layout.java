@@ -27,11 +27,11 @@ class MarcoLayout extends JFrame{
 		
 		//Agregamos la lamina al marco
 		PanelLayout lamina = new PanelLayout(); 
-		
-		add(lamina); //agregamos la lámina
-		
 		PanelLayout2 lamina2 = new PanelLayout2(); 
-		add(lamina2);
+
+		//para evitar que machaque la 2 lamina la 1 le pasamos a la 1 un BorderLayout
+		add(lamina, BorderLayout.NORTH); //agregamos la lámina
+		add(lamina2, BorderLayout.SOUTH); //así la segunda lámina machaca la primera
 	}
 }
 
