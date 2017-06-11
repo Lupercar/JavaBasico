@@ -27,7 +27,7 @@ class MarcoLayout extends JFrame{
 		
 		//antes de agregar la lámina indicamos su disposición
 		//utilizamos el método setLayout abreviado de JPanel
-		lamina.setLayout(new FlowLayout(FlowLayout.LEFT));
+		lamina.setLayout(new FlowLayout(FlowLayout.CENTER,75,100));
 		
 		add(lamina); //agregamos la lámina
 	}
