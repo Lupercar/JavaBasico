@@ -32,6 +32,7 @@ class LaminaCalculadora extends JPanel{
 	public LaminaCalculadora(){
 		setLayout(new BorderLayout());
 		JButton pantalla = new JButton("0");
+		pantalla.setEnabled(false);
 		add(pantalla, BorderLayout.NORTH);
 	}
 }
