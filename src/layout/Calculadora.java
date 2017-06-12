@@ -31,6 +31,7 @@ class MarcoCalculadora extends JFrame{
 class LaminaCalculadora extends JPanel{
 	public LaminaCalculadora(){
 		setLayout(new BorderLayout());
-		add(new JButton("0"), BorderLayout.NORTH);
+		JButton pantalla = new JButton("0");
+		add(pantalla, BorderLayout.NORTH);
 	}
 }
