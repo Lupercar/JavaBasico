@@ -94,6 +94,7 @@ class LaminaCalculadora extends JPanel {
 			//Si principio es true que nos borre la pantalla
 			if(principio){
 				pantalla.setText("");
+				principio = false; 
 			}
 			
 			pantalla.setText(pantalla.getText() + entrada);
@@ -107,5 +108,5 @@ class LaminaCalculadora extends JPanel {
 	
 	private JButton pantalla;
 	
-	private boolean principio; 
+	private boolean principio; //sino se inicia por defecto es false
 }
