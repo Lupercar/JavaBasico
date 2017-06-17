@@ -71,13 +71,15 @@ class LaminaCalculadora extends JPanel {
 		add(miLamina2, BorderLayout.CENTER);
 	}
 
-	private void ponerBoton(String rotulo) {
+	//método para agregar botones y ponerlos a la escucha
+	private void ponerBoton(String rotulo, ActionListener oyente) {
 		JButton boton = new JButton(rotulo);
+		boton.addActionListener(oyente); //ponemos el botón a la escucha
 		miLamina2.add(boton);
 	}
 	
 	//clase interna que gestionará los eventos
-	private class InsertaNumero implements ActionListener{
+	private class insertaNumero implements ActionListener{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
