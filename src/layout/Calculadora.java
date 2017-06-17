@@ -21,11 +21,14 @@ class MarcoCalculadora extends JFrame {
 
 	public MarcoCalculadora() {
 		setTitle("Calculadora");
-		setBounds(500, 300, 450, 300);
+//		setBounds(500, 300, 450, 300);
 		setVisible(true);
 
 		LaminaCalculadora miCalculadora = new LaminaCalculadora();
 		add(miCalculadora);
+		
+		//le decimos que la lamina se adapte al tamaño de lo que contiene
+		pack(); 
 	}
 }
 
