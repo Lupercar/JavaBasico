@@ -42,11 +42,31 @@ class LaminaCalculadora extends JPanel {
 		// le decimos que esta 2 lamina tiene una disposicion grid layout
 		miLamina2.setLayout(new GridLayout(4, 4));
 
+		ponerBoton("7");
+		ponerBoton("8");
+		ponerBoton("9");
+		ponerBoton("/");
+		
+		ponerBoton("4");
+		ponerBoton("5");
+		ponerBoton("6");
+		ponerBoton("*");
+		
+		ponerBoton("1");
+		ponerBoton("2");
+		ponerBoton("3");
+		ponerBoton("-");
+		
+		ponerBoton("0");
+		ponerBoton(",");
+		ponerBoton("+");
+		ponerBoton("=");
+		
 		// agregamos la lamina2 a la lamina principal
 		add(miLamina2, BorderLayout.CENTER);
 	}
 
-	private void PonerBoton(String rotulo) {
+	private void ponerBoton(String rotulo) {
 		JButton boton = new JButton(rotulo);
 		miLamina2.add(boton);
 	}
