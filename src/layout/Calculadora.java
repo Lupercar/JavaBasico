@@ -1,6 +1,7 @@
 package layout;
 
 import java.awt.BorderLayout;
+import java.awt.GridLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -32,7 +33,18 @@ class LaminaCalculadora extends JPanel{
 	public LaminaCalculadora(){
 		setLayout(new BorderLayout());
 		JButton pantalla = new JButton("0");
-		pantalla.setEnabled(false);
+		pantalla.setEnabled(false); //deshabilitamos el botón
 		add(pantalla, BorderLayout.NORTH);
+		
+		//creamos una segunda lámina para los números 
+		//podriamos crear otra clase que herede de JPanel
+		JPanel miLamina2 = new JPanel(); 
+		
+		//le decimos que esta 2 lamina tiene una disposicion grid layout
+		miLamina2.setLayout(new GridLayout(4, 4));
+		
+		//vamos creando y añadiendo botones
+		JButton boton1 = new JButton("1");
+		miLamina2.add(boton1);
 	}
 }
