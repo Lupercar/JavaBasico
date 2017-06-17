@@ -2,6 +2,8 @@ package layout;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -72,6 +74,18 @@ class LaminaCalculadora extends JPanel {
 	private void ponerBoton(String rotulo) {
 		JButton boton = new JButton(rotulo);
 		miLamina2.add(boton);
+	}
+	
+	//clase interna que gestionará los eventos
+	private class InsertaNumero implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			
+			// Almacenamos dentro de entrada el texto del botón
+			String entrada = e.getActionCommand(); 
+		}
+		
 	}
 
 	// creamos una segunda lámina para los números
