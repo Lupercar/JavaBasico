@@ -91,7 +91,7 @@ class LaminaCalculadora extends JPanel {
 			// Almacenamos dentro de entrada el texto del botón
 			String entrada = e.getActionCommand(); 
 			
-			pantalla.setText(entrada);
+			pantalla.setText(pantalla.getText() + entrada);
 		}
 		
 	}
