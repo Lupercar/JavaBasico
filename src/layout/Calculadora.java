@@ -46,26 +46,30 @@ class LaminaCalculadora extends JPanel {
 		
 		// le decimos que esta 2 lamina tiene una disposicion grid layout
 		miLamina2.setLayout(new GridLayout(4, 4));
-
-		ponerBoton("7");
-		ponerBoton("8");
-		ponerBoton("9");
-		ponerBoton("/");
 		
-		ponerBoton("4");
-		ponerBoton("5");
-		ponerBoton("6");
-		ponerBoton("*");
+		//creamos una instancia de la clase InsertaNumero
+		ActionListener insertaNumero = new InsertaNumero();
 		
-		ponerBoton("1");
-		ponerBoton("2");
-		ponerBoton("3");
-		ponerBoton("-");
+		//agregamos la instancia insertaNumero a todos los métodos ponerBoton
+		ponerBoton("7", insertaNumero);
+		ponerBoton("8", insertaNumero);
+		ponerBoton("9", insertaNumero);
+		ponerBoton("/", insertaNumero);
 		
-		ponerBoton("0");
-		ponerBoton(",");
-		ponerBoton("+");
-		ponerBoton("=");
+		ponerBoton("4", insertaNumero);
+		ponerBoton("5", insertaNumero);
+		ponerBoton("6", insertaNumero);
+		ponerBoton("*", insertaNumero);
+		
+		ponerBoton("1", insertaNumero);
+		ponerBoton("2", insertaNumero);
+		ponerBoton("3", insertaNumero);
+		ponerBoton("-", insertaNumero);
+		
+		ponerBoton("0", insertaNumero);
+		ponerBoton(",", insertaNumero);
+		ponerBoton("+", insertaNumero);
+		ponerBoton("=", insertaNumero);
 		
 		// agregamos la lamina2 a la lamina principal
 		add(miLamina2, BorderLayout.CENTER);
@@ -79,7 +83,7 @@ class LaminaCalculadora extends JPanel {
 	}
 	
 	//clase interna que gestionará los eventos
-	private class insertaNumero implements ActionListener{
+	private class InsertaNumero implements ActionListener{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
