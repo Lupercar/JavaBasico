@@ -36,6 +36,9 @@ class MarcoCalculadora extends JFrame {
 
 class LaminaCalculadora extends JPanel {
 	public LaminaCalculadora() {
+		
+		principio = true; 
+		
 		setLayout(new BorderLayout());
 		pantalla = new JButton("0");
 		pantalla.setEnabled(false); // deshabilitamos el botón
