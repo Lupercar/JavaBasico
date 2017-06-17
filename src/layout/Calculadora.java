@@ -52,27 +52,28 @@ class LaminaCalculadora extends JPanel {
 		
 		//creamos una instancia de la clase InsertaNumero
 		ActionListener insertaNumero = new InsertaNumero();
+		ActionListener orden = new AccionOrden();
 		
 		//agregamos la instancia insertaNumero a todos los métodos ponerBoton
 		ponerBoton("7", insertaNumero);
 		ponerBoton("8", insertaNumero);
 		ponerBoton("9", insertaNumero);
-		ponerBoton("/", insertaNumero);
+		ponerBoton("/", orden);
 		
 		ponerBoton("4", insertaNumero);
 		ponerBoton("5", insertaNumero);
 		ponerBoton("6", insertaNumero);
-		ponerBoton("*", insertaNumero);
+		ponerBoton("*", orden);
 		
 		ponerBoton("1", insertaNumero);
 		ponerBoton("2", insertaNumero);
 		ponerBoton("3", insertaNumero);
-		ponerBoton("-", insertaNumero);
+		ponerBoton("-", orden);
 		
 		ponerBoton("0", insertaNumero);
 		ponerBoton(",", insertaNumero);
-		ponerBoton("+", insertaNumero);
-		ponerBoton("=", insertaNumero);
+		ponerBoton("+", orden);
+		ponerBoton("=", orden);
 		
 		// agregamos la lamina2 a la lamina principal
 		add(miLamina2, BorderLayout.CENTER);
@@ -105,6 +106,17 @@ class LaminaCalculadora extends JPanel {
 		
 	}
 
+	//creamos una clase interna que gestione los eventos 
+	//de las operaciones matemáticas
+	private class AccionOrden implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			principio = true; 
+		}
+		
+	}
+	
 	// creamos una segunda lámina para los números
 	// podriamos crear otra clase que herede de JPanel
 	private JPanel miLamina2;
