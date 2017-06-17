@@ -36,6 +36,9 @@ class LaminaCalculadora extends JPanel {
 		pantalla.setEnabled(false); // deshabilitamos el botón
 		add(pantalla, BorderLayout.NORTH);
 
+		//iniciamos miLamina2
+		miLamina2 = new JPanel();
+		
 		// le decimos que esta 2 lamina tiene una disposicion grid layout
 		miLamina2.setLayout(new GridLayout(4, 4));
 
@@ -50,5 +53,5 @@ class LaminaCalculadora extends JPanel {
 
 	// creamos una segunda lámina para los números
 	// podriamos crear otra clase que herede de JPanel
-	private JPanel miLamina2 = new JPanel();
+	private JPanel miLamina2;
 }
