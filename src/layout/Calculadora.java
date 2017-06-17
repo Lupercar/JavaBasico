@@ -88,8 +88,13 @@ class LaminaCalculadora extends JPanel {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			
-			// Almacenamos dentro de entrada el texto del botón
+			// capturamos en entrada el texto del botón
 			String entrada = e.getActionCommand(); 
+			
+			//Si principio es true que nos borre la pantalla
+			if(principio){
+				pantalla.setText("");
+			}
 			
 			pantalla.setText(pantalla.getText() + entrada);
 		}
@@ -101,4 +106,6 @@ class LaminaCalculadora extends JPanel {
 	private JPanel miLamina2;
 	
 	private JButton pantalla;
+	
+	private boolean principio; 
 }
