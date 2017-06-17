@@ -37,7 +37,7 @@ class MarcoCalculadora extends JFrame {
 class LaminaCalculadora extends JPanel {
 	public LaminaCalculadora() {
 		setLayout(new BorderLayout());
-		JButton pantalla = new JButton("0");
+		pantalla = new JButton("0");
 		pantalla.setEnabled(false); // deshabilitamos el botón
 		add(pantalla, BorderLayout.NORTH);
 
@@ -84,6 +84,8 @@ class LaminaCalculadora extends JPanel {
 			
 			// Almacenamos dentro de entrada el texto del botón
 			String entrada = e.getActionCommand(); 
+			
+			pantalla.setText(entrada);
 		}
 		
 	}
@@ -91,4 +93,6 @@ class LaminaCalculadora extends JPanel {
 	// creamos una segunda lámina para los números
 	// podriamos crear otra clase que herede de JPanel
 	private JPanel miLamina2;
+	
+	private JButton pantalla;
 }
