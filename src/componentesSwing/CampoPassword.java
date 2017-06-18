@@ -1,6 +1,7 @@
 package componentesSwing;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
@@ -9,6 +10,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
 public class CampoPassword {
 
@@ -48,13 +51,13 @@ class LaminaPassword extends JPanel{
 		JTextField cUsuario = new JTextField(15); //longitud de 15 columnas
 		
 		//instancio una clase para Password que es parecido a un JTextField
-		JPasswordField cContraseña = new JPasswordField(15); 
+		cContrasena = new JPasswordField(15); 
 		
 		//ponemos todos los elementos en la lámina superior al GridLayout
 		laminaSuperior.add(etiqueta1);
 		laminaSuperior.add(cUsuario);
 		laminaSuperior.add(etiqueta2);
-		laminaSuperior.add(cContraseña);
+		laminaSuperior.add(cContrasena);
 		
 		//instancio un botón 
 		JButton enviar = new JButton("Enviar"); 
@@ -62,5 +65,39 @@ class LaminaPassword extends JPanel{
 		//añadimos el botón a la lámina 
 		add(enviar, BorderLayout.SOUTH); 
 	}
+	
+	//creamos la clase interna que controla los eventos
+	private class CompruebaPass implements DocumentListener{
+
+		@Override
+		public void changedUpdate(DocumentEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void insertUpdate(DocumentEvent e) {
+			// Comprobamos la longitud de la contraseña a medida que introducimos caracteres
+			char [] contrasena;
+			contrasena = cContrasena.getPassword(); 
+			
+			if(contrasena.length<8 || contrasena.length > 12){
+				cContrasena.setBackground(Color.RED);
+			}else {
+				cContrasena.setBackground(Color.WHITE);
+			}
+			
+		}
+
+		@Override
+		public void removeUpdate(DocumentEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	
+	private JPasswordField cContrasena; 
 }
+
 
