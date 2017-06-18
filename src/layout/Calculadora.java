@@ -77,6 +77,9 @@ class LaminaCalculadora extends JPanel {
 		
 		// agregamos la lamina2 a la lamina principal
 		add(miLamina2, BorderLayout.CENTER);
+		
+		//inicializamos la variable a = 
+		ultimaOperacion = "";
 	}
 
 	//método para agregar botones y ponerlos a la escucha
@@ -112,7 +115,32 @@ class LaminaCalculadora extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
+			
+			String operacion = e.getActionCommand(); //capturo la operacion + - / * = para un if
+			calcular(Double.parseDouble(pantalla.getText())); 
+
+			ultimaOperacion = operacion;
+			
 			principio = true; 
+		}
+
+		private void calcular(double numero) {
+			//comparo dos String
+			if(ultimaOperacion.equals("+")){
+				//acumula en resultado lo que me pasa por parámetro
+				resultado += numero;
+				System.out.println(resultado);
+			}else if( ultimaOperacion.equals("-")){
+				resultado -= numero; 
+			}else if( ultimaOperacion.equals("*")){
+				resultado *= numero; 
+			}else if( ultimaOperacion.equals("/")){
+				resultado /= numero; 
+			}else if( ultimaOperacion.equals("=")){
+				resultado = numero; 
+			}
+			
+			pantalla.setText("" + resultado); //le concateno un "" para hacer del double un String
 		}
 		
 	}
@@ -124,4 +152,8 @@ class LaminaCalculadora extends JPanel {
 	private JButton pantalla;
 	
 	private boolean principio; //sino se inicia por defecto es false
+	
+	private double resultado; //variable donde almacenamos el resultado
+	
+	private String ultimaOperacion; //guarda la última operación
 }
