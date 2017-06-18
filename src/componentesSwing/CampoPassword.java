@@ -3,6 +3,7 @@ package componentesSwing;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -54,6 +55,12 @@ class LaminaPassword extends JPanel{
 		laminaSuperior.add(cUsuario);
 		laminaSuperior.add(etiqueta2);
 		laminaSuperior.add(cContraseña);
+		
+		//instancio un botón 
+		JButton enviar = new JButton("Enviar"); 
+		
+		//añadimos el botón a la lámina 
+		add(enviar, BorderLayout.SOUTH); 
 	}
 }
 
