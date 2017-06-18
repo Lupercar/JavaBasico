@@ -1,5 +1,8 @@
 package componentesSwing;
 
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -25,6 +28,13 @@ class MarcoPassword extends JFrame{
 class LaminaPassword extends JPanel{
 	public LaminaPassword(){
 		
+		//indico distribución BorderLayout de la lámina
+		setLayout(new BorderLayout());
+		
+		JPanel laminaSuperior = new JPanel(); 
+		laminaSuperior.setLayout(new GridLayout(2, 2));
+		
+		add(laminaSuperior, BorderLayout.NORTH); 
 	}
 }
 
