@@ -24,7 +24,7 @@ class MarcoTexto extends JFrame{
 
 class LaminaTexto extends JPanel{
 	public LaminaTexto(){
-		JTextField campo1 = new JTextField("Texto por defecto"); 
+		JTextField campo1 = new JTextField(20); 
 		add(campo1); 
 	}
 }
