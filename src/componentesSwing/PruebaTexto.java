@@ -1,5 +1,6 @@
 package componentesSwing;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -27,6 +28,7 @@ class LaminaTexto extends JPanel{
 		JTextField campo1 = new JTextField(20); 
 		add(campo1); 
 		
-		System.out.println(campo1.getText().trim());
+		//Agregamos botón
+		JButton miBoton = new JButton("Dale"); 
 	}
 }
