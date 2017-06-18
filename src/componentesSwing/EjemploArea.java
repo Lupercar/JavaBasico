@@ -2,6 +2,7 @@ package componentesSwing;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 public class EjemploArea {
 
@@ -25,6 +26,10 @@ class MarcoArea extends JFrame{
 
 class LaminaArea extends JPanel{
 	public LaminaArea(){
+		//instanciamos un JTextArea
+		JTextArea miArea = new JTextArea(8,20); // 8 filas 20 columnas
 		
+		//agregamos a la lámina
+		add(miArea); 
 	}
 }
