@@ -94,7 +94,14 @@ class LaminaPassword extends JPanel{
 
 		@Override
 		public void removeUpdate(DocumentEvent e) {
-			// TODO Auto-generated method stub
+			char [] contrasena;
+			contrasena = cContrasena.getPassword(); 
+			
+			if(contrasena.length<8 || contrasena.length > 12){
+				cContrasena.setBackground(Color.RED);
+			}else {
+				cContrasena.setBackground(Color.WHITE);
+			}
 			
 		}
 		
