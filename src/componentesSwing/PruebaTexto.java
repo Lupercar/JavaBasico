@@ -51,10 +51,29 @@ class LaminaTexto extends JPanel{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			//imprimo contenido de campo1 quitando espacios
-			System.out.println(campo1.getText().trim()); 
+			
+			//variable que evalua cuantas @ hay
+			int correcto = 0; 
+			
+			//variable que guarda el contenido de campo1
+			//eliminando espacios adicionales
+			String email = campo1.getText().trim();
+			
+			//recorremos String email carácter a carácter
+			for(int i=0; i < email.length(); i++){
+					//evaluamos si este carácter es una @
+					if(email.charAt(i)=='@'){
+						correcto++; 
+					}
+			}
+			
+			if(correcto!=1){
+				System.out.println("Email incorrecto."); 
+			}else{
+				System.out.println("Email correcto.");
+			}
+				
 		}
-		
 	}
 	
 	private JTextField campo1; 
