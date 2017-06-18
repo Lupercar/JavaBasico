@@ -31,8 +31,14 @@ class LaminaPrueba extends JPanel{
 	public LaminaPrueba(){
 		JTextField miCampo = new JTextField(20);
 		
+		//creo una instnacia EscuchaTexto
+		EscuchaTexto elEvento = new EscuchaTexto();
+		
 		//creo una instancia de tipo Document
-		Document miDoc = miCampo.getDocument();  
+		Document miDoc = miCampo.getDocument(); 
+		
+		//pongo la instancia de tipo Document a la escucha
+		miDoc.addDocumentListener(elEvento);
 		
 		add(miCampo); 
 	}
