@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.GridLayout;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class CampoPassword {
@@ -35,6 +36,10 @@ class LaminaPassword extends JPanel{
 		laminaSuperior.setLayout(new GridLayout(2, 2));
 		
 		add(laminaSuperior, BorderLayout.NORTH); 
+		
+		//instancio las etiquetas
+		JLabel etiqueta1 = new JLabel("Usuario:");
+		JLabel etiqueta2 = new JLabel("Contraseña:");
 	}
 }
 
