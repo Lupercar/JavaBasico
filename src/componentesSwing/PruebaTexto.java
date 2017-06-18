@@ -30,12 +30,18 @@ class MarcoTexto extends JFrame{
 class LaminaTexto extends JPanel{
 	public LaminaTexto(){
 		
+		//iniciamos el JLabel resultado
+		resultado = new JLabel(); 
+		
 		//creamos objeto de tipo JLabel
 		JLabel texto1 = new JLabel("Email: "); 
 		add(texto1); //lo añado a la lamina
 		
 		campo1 = new JTextField(20); 
 		add(campo1); 
+		
+		//agregamos resultado aquí
+		add(resultado); 
 		
 		//Agregamos botón
 		JButton miBoton = new JButton("Comprobar"); 
@@ -68,13 +74,16 @@ class LaminaTexto extends JPanel{
 			}
 			
 			if(correcto!=1){
-				System.out.println("Email incorrecto."); 
+				resultado.setText("Email incorrecto.");
 			}else{
-				System.out.println("Email correcto.");
+				resultado.setText("Email correcto.");
 			}
 				
 		}
 	}
 	
 	private JTextField campo1; 
+	
+	 //JLabel que indica si el email es o no correcto en la App
+	private JLabel resultado;
 }
