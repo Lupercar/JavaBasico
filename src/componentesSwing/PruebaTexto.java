@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -28,11 +29,16 @@ class MarcoTexto extends JFrame{
 
 class LaminaTexto extends JPanel{
 	public LaminaTexto(){
+		
+		//creamos objeto de tipo JLabel
+		JLabel texto1 = new JLabel("Email: "); 
+		add(texto1); //lo añado a la lamina
+		
 		campo1 = new JTextField(20); 
 		add(campo1); 
 		
 		//Agregamos botón
-		JButton miBoton = new JButton("Dale"); 
+		JButton miBoton = new JButton("Comprobar"); 
 		
 		//Ponemos el botón a la escucha
 		DameTexto miEvento = new DameTexto();
