@@ -5,6 +5,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import javax.swing.text.Document;
 
 public class Prueba {
 
@@ -29,6 +30,10 @@ class MarcoPrueba extends JFrame{
 class LaminaPrueba extends JPanel{
 	public LaminaPrueba(){
 		JTextField miCampo = new JTextField(20);
+		
+		//creo una instancia de tipo Document
+		Document miDoc = miCampo.getDocument();  
+		
 		add(miCampo); 
 	}
 	
