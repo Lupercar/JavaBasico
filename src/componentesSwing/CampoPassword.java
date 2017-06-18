@@ -53,6 +53,9 @@ class LaminaPassword extends JPanel{
 		//instancio una clase para Password que es parecido a un JTextField
 		cContrasena = new JPasswordField(15); 
 		
+		//ponemos a cContrasena a la escucha
+		cContrasena.getDocument().addDocumentListener(new CompruebaPass());
+		
 		//ponemos todos los elementos en la lámina superior al GridLayout
 		laminaSuperior.add(etiqueta1);
 		laminaSuperior.add(cUsuario);
