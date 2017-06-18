@@ -26,5 +26,7 @@ class LaminaTexto extends JPanel{
 	public LaminaTexto(){
 		JTextField campo1 = new JTextField("Texto por defecto",20); 
 		add(campo1); 
+		
+		System.out.println(campo1.getText());
 	}
 }
