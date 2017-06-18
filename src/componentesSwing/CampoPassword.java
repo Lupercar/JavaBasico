@@ -6,6 +6,7 @@ import java.awt.GridLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class CampoPassword {
@@ -44,6 +45,9 @@ class LaminaPassword extends JPanel{
 		
 		//instancio los cuadros de texto 
 		JTextField cUsuario = new JTextField(15); //longitud de 15 columnas
+		
+		//instancio una clase para Password que es parecido a un JTextField
+		JPasswordField cContraseña = new JPasswordField(15); 
 	}
 }
 
