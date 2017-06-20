@@ -2,6 +2,7 @@ package componentesSwing;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 public class EjemploArea {
@@ -29,7 +30,13 @@ class LaminaArea extends JPanel{
 		//instanciamos un JTextArea
 		JTextArea miArea = new JTextArea(8,20); // 8 filas 20 columnas
 		
-		//agregamos a la lámina
-		add(miArea); 
+		//Utilizo una lamina JScrolPane que tiene barras de Scrol
+		JScrollPane laminaBarra = new JScrollPane(miArea); //le añado el componente
+		
+		//modifico el comportamiento del JTextArea evitando que ensanche horizontalmente
+		miArea.setLineWrap(true);
+		
+		//agregamos a la lámina esta lamina con barra
+		add(laminaBarra); 
 	}
 }
