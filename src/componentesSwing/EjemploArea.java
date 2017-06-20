@@ -1,5 +1,9 @@
 package componentesSwing;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -38,5 +42,20 @@ class LaminaArea extends JPanel{
 		
 		//agregamos a la lámina esta lamina con barra
 		add(laminaBarra); 
+		
+		//construimos un boton
+		JButton miBoton = new JButton("Dar");
+		
+		//le decimos que el botón este a la escucha
+		miBoton.addActionListener(new GestionaArea());
+	}
+	
+	private class GestionaArea implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			
+		}
+		
 	}
 }
