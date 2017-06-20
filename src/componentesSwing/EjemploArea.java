@@ -32,7 +32,7 @@ class MarcoArea extends JFrame{
 class LaminaArea extends JPanel{
 	public LaminaArea(){
 		//instanciamos un JTextArea
-		JTextArea miArea = new JTextArea(8,20); // 8 filas 20 columnas
+		miArea = new JTextArea(8,20); // 8 filas 20 columnas
 		
 		//Utilizo una lamina JScrolPane que tiene barras de Scrol
 		JScrollPane laminaBarra = new JScrollPane(miArea); //le añado el componente
@@ -46,16 +46,22 @@ class LaminaArea extends JPanel{
 		//construimos un boton
 		JButton miBoton = new JButton("Dar");
 		
-		//le decimos que el botón este a la escucha
+		//Ponemos la clase GestionaArea a la escucha del botón
 		miBoton.addActionListener(new GestionaArea());
+		
+		//agregamos el botón
+		add(miBoton); 
 	}
 	
 	private class GestionaArea implements ActionListener{
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			
+			//le paso el contenido de miArea con su método getText()
+			System.out.println(miArea.getText());
 		}
 		
 	}
+	
+	private JTextArea miArea;
 }
