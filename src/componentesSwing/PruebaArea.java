@@ -76,6 +76,9 @@ class MarcoPruebaArea extends JFrame{
 		//agrego el area de texto en la zona superior del BorderLayout
 		//inicio areaTexto indico dimensiones 8 filas 20 columnas
 		areaTexto = new JTextArea(8,20); 
+		
+		//para que tenga barras de desplazamiento añadimos esta lámina a una JScrollPane
+		laminaConBarras = new JScrollPane(areaTexto); 
 	}
 	
 	//defino un objeto de tipo lámina
