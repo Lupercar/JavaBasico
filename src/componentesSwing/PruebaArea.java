@@ -44,6 +44,20 @@ class MarcoPruebaArea extends JFrame{
 		
 		//agregamos botonInsertar a la lámina
 		laminaBotones.add(botonInsertar); 
+		
+		//inicio el otro boton
+		botonSaltoLinea = new JButton("Salto Línea"); 
+		
+		botonSaltoLinea.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				boolean saltar = !areaTexto.getLineWrap(); //le paso true a saltar
+				
+				//ponemos un salto de línea
+				areaTexto.setLineWrap(saltar);
+			}
+		});
 	}
 	
 	//defino un objeto de tipo lámina
