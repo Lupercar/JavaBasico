@@ -72,6 +72,10 @@ class MarcoPruebaArea extends JFrame{
 		
 		//agrego la lamina a mi marco en la zona sur
 		add(laminaBotones, BorderLayout.SOUTH);
+		
+		//agrego el area de texto en la zona superior del BorderLayout
+		//inicio areaTexto indico dimensiones 8 filas 20 columnas
+		areaTexto = new JTextArea(8,20); 
 	}
 	
 	//defino un objeto de tipo lámina
