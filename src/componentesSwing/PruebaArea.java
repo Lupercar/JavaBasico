@@ -1,7 +1,11 @@
 package componentesSwing;
 
-import javax.swing.JFrame;
+import java.awt.BorderLayout;
 
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+//crearé un gran área de texto en la zona central y abajo 2 botones.
 public class PruebaArea {
 
 	public static void main(String[] args) {
@@ -16,5 +20,14 @@ class MarcoPruebaArea extends JFrame{
 		setTitle("Probando área de texto");
 		setBounds(500, 300, 500, 350);
 		setVisible(true);
+		
+		//establezco la disposición en el marco de un BorderLayout
+		setLayout(new BorderLayout());
+		
+		//inicio laminaBotones
+		laminaBotones = new JPanel(); 
 	}
+	
+	//defino un objeto de tipo lámina
+	private JPanel laminaBotones; 
 }
