@@ -78,7 +78,10 @@ class MarcoPruebaArea extends JFrame{
 		areaTexto = new JTextArea(8,20); 
 		
 		//para que tenga barras de desplazamiento añadimos esta lámina a una JScrollPane
-		laminaConBarras = new JScrollPane(areaTexto); 
+		laminaConBarras = new JScrollPane(areaTexto);
+		
+		//agregar laminaConBarras a la zona central
+		add(laminaConBarras,BorderLayout.CENTER);
 	}
 	
 	//defino un objeto de tipo lámina
