@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 //crearé un gran área de texto en la zona central y abajo 2 botones.
@@ -65,6 +66,12 @@ class MarcoPruebaArea extends JFrame{
 				}
 			}
 		});
+		
+		//agrego botonSaltoLinea
+		laminaBotones.add(botonSaltoLinea);
+		
+		//agrego la lamina a mi marco en la zona sur
+		add(laminaBotones, BorderLayout.SOUTH);
 	}
 	
 	//defino un objeto de tipo lámina
@@ -75,4 +82,7 @@ class MarcoPruebaArea extends JFrame{
 	
 	//defino area de texto
 	private JTextArea areaTexto; 
+	
+	//defino lamina con barras
+	private JScrollPane laminaConBarras; 
 }
