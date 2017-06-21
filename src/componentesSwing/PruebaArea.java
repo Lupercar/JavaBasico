@@ -39,7 +39,7 @@ class MarcoPruebaArea extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				areaTexto.append("En un lugar de la mancha de cuyo nombre no quiero acordarme"); 
+				areaTexto.append("En un lugar de la mancha de cuyo nombre no quiero acordarme..."); 
 			}
 		});
 		
