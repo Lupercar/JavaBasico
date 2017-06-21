@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 public class PruebaArea2 {
@@ -39,18 +40,22 @@ class LaminaArea2 extends JPanel {
 		// Creo botones
 		JButton botonInsertar = new JButton("Insertar");
 		botonSaltoLinea = new JButton("Salto Linea");
-		
+
 		laminaBotones.add(botonInsertar);
-		laminaBotones.add(botonSaltoLinea); 
-		
+		laminaBotones.add(botonSaltoLinea);
+
 		add(laminaBotones, BorderLayout.SOUTH);
 
 		// agrego el area de texto en la zona superior del BorderLayout
 		// inicio areaTexto indico dimensiones 8 filas 20 columnas
 		areaTexto = new JTextArea(8, 20);
 
-		add(areaTexto,BorderLayout.CENTER);
-		
+		// para que tenga barras de desplazamiento añadimos esta lámina a una
+		// JScrollPane
+		laminaConBarras = new JScrollPane(areaTexto);
+
+		add(laminaConBarras, BorderLayout.CENTER);
+
 		// pongo botones a la escucha
 		botonInsertar.addActionListener(new InsertarTexto());
 		botonSaltoLinea.addActionListener(new SaltoLinea());
@@ -67,21 +72,24 @@ class LaminaArea2 extends JPanel {
 
 	}
 
-	private class SaltoLinea implements ActionListener{
+	private class SaltoLinea implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			
-			boolean saltar = !areaTexto.getLineWrap(); 
-			
+
+			boolean saltar = !areaTexto.getLineWrap();
+
 			areaTexto.setLineWrap(saltar);
-			
+
 			botonSaltoLinea.setText(saltar ? "Quitar salto" : "Salto Línea");
 		}
-		
+
 	}
-	
+
 	private JTextArea areaTexto;
-	
-	private JButton botonSaltoLinea; 
+
+	private JButton botonSaltoLinea;
+
+	// defino lamina con barras
+	private JScrollPane laminaConBarras;
 }
