@@ -56,6 +56,13 @@ class MarcoPruebaArea extends JFrame{
 				
 				//ponemos un salto de línea
 				areaTexto.setLineWrap(saltar);
+				
+				//evaluo si hay o no salto de línea, si es true
+				if(saltar){
+					botonSaltoLinea.setText("Quitar salto");
+				}else{
+					botonSaltoLinea.setText("Salto Línea");
+				}
 			}
 		});
 	}
