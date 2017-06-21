@@ -41,6 +41,9 @@ class MarcoPruebaArea extends JFrame{
 				areaTexto.append("En un lugar de la mancha de cuyo nombre no quiero acordarme"); 
 			}
 		});
+		
+		//agregamos botonInsertar a la lámina
+		laminaBotones.add(botonInsertar); 
 	}
 	
 	//defino un objeto de tipo lámina
